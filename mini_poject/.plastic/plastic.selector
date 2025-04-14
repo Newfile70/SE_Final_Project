@@ -1,0 +1,4 @@
+repository "mini_project@lingdage@cloud.cn"
+  path "/"
+    br "/main"
+    co "/main"
