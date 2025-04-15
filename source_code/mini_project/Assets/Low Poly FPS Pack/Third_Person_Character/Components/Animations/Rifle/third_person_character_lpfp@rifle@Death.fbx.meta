@@ -1,0 +1,198 @@
+fileFormatVersion: 2
+guid: ba6b35cd04e40d747ab51f7c1660eae2
+ModelImporter:
+  serializedVersion: 20200
+  internalIDToNameTable:
+  - first:
+      74: 5274597936405998570
+    second: Armature|_pose_ref@rifle_tpc
+  - first:
+      74: -6497199371517654681
+    second: Armature|_reference@rifle_tpc
+  - first:
+      74: 4820524880508465260
+    second: Armature|fire@rifle_tpc
+  - first:
+      74: -5486381473718128345
+    second: Armature|grenade_throw_cancel@rifle_tpc
+  - first:
+      74: 3778605672899696579
+    second: Armature|grenade_throw_full@rifle_tpc
+  - first:
+      74: -7922985881213544080
+    second: Armature|grenade_throw_pose@rifle_tpc
+  - first:
+      74: 5793624789575049483
+    second: Armature|grenade_throw_release@rifle_tpc
+  - first:
+      74: 184687128698410252
+    second: Armature|grenade_throw_start@rifle_tpc
+  - first:
+      74: -6402510106671311804
+    second: Armature|idle@rifle_tpc
+  - first:
+      74: 6265606090896143255
+    second: Armature|idle_relaxed@rifle_tpc
+  - first:
+      74: -2612178169519133210
+    second: Armature|jump_land@rifle_tpc
+  - first:
+      74: -7786344409107577783
+    second: Armature|jump_loop@rifle_tpc
+  - first:
+      74: 5668507693511442493
+    second: Armature|jump_start@rifle_tpc
+  - first:
+      74: -6626967596930732248
+    second: Armature|reload_ammo_left@rifle_tpc
+  - first:
+      74: -6770426770512188080
+    second: Armature|reload_out_of_ammo@rifle_tpc
+  - first:
+      74: 4737662797229083478
+    second: Armature|run_45_back_left@rifle_tpc
+  - first:
+      74: -2865813906697108261
+    second: Armature|run_45_back_right@rifle_tpc
+  - first:
+      74: 88037303359335680
+    second: Armature|run_45_up_left@rifle_tpc
+  - first:
+      74: -1976918087766968892
+    second: Armature|run_45_up_right@rifle_tpc
+  - first:
+      74: -2193575382500418074
+    second: Armature|run_backward@rifle_tpc
+  - first:
+      74: 7637694446283831542
+    second: Armature|run_forward@rifle_tpc
+  - first:
+      74: 2689959853693773999
+    second: Armature|run_strafe_left@rifle_tpc
+  - first:
+      74: -2524767007645027730
+    second: Armature|run_strafe_right@rifle_tpc
+  - first:
+      74: -6515219810039688302
+    second: Armature|walk_45_back_left@rifle_tpc
+  - first:
+      74: -4729614895957314072
+    second: Armature|walk_45_back_right@rifle_tpc
+  - first:
+      74: 8839320133553717253
+    second: Armature|walk_45_up_left@rifle_tpc
+  - first:
+      74: -258016986650022536
+    second: Armature|walk_45_up_right@rifle_tpc
+  - first:
+      74: 1843169660150346438
+    second: Armature|walk_backward@rifle_tpc
+  - first:
+      74: -2877009577184900375
+    second: Armature|walk_forward@rifle_tpc
+  - first:
+      74: 5168478682777592985
+    second: Armature|walk_strafe_left@rifle_tpc
+  - first:
+      74: -1039450743810875905
+    second: Armature|walk_strafe_right@rifle_tpc
+  - first:
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
