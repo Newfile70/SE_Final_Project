@@ -148,6 +148,57 @@ This future plan aims to expand the game's features and provide a more engaging 
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MAX_Damage = MAX_Damage *_ 0.7f;`<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MIN_Damage = MIN_Damage * 0.7f;`<br>
       &nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
+   - **7. Programming**
+     - The structure of the code and the naming of variables are clear and readable. Each method and key logic has comments.
+   - **8. Scene**
+     - **There are a total of 5 scenes in the game**
+     - **1. Each scene has obvious differences**
+       - Battle 1 scene is a valley town
+       - Battle 2 scene is a city block
+       - Battle 3 scene is an arena
+       - Battle 4 scene is an ancient Roman Colosseum
+       - Battle 5 scene is a roadside village.
+     - **2. Each scene has different enemies**
+       - Battle 1 has enemies B and C
+       - Battle 2 has enemy A
+       - Battle 3 has enemy E
+       - Battle 4 has enemy F
+       - Battle 5 has enemies B and D.
+     - **9. Settings**
+       - **1. There are four options in the settings:**
+         - **1. Volume:** A slider is used to adjust the volume. Each time the slider is moved, the `AudioCtrl()` method is called. In the `AudioCtrl()` method, the `PlayerPrefs.SetFloat("AudioValue", AudioSlider.value);` statement is used to store the volume value. When an `AudioSource` needs to use the volume data, the `audioSource.volume = PlayerPrefs.GetFloat("AudioValue", 60f) / 60 * defaultVolume;` statement is used to change the volume of the `gameObject`.
+         - **2. Brightness:** A slider is used to adjust the brightness. Each time the slider is moved, the `LightCtrl()` method is called. In the `LightCtrl()` method, the `PlayerPrefs.SetFloat("LightValue", LightSlider.value);` statement is used to store the brightness value. When a Light component needs to use the brightness data, the `lightVal.intensity = PlayerPrefs.GetFloat("LightValue", 60f) / 60 * defaultBrightness;` statement is used to change the brightness of the `Directional Light` or other Lights.
+         - **3. DPI:** A slider is used to adjust the DPI. Each time the slider is moved, the `MouseSenstivityCtrl()` method is called. In the `MouseSenstivityCtrl()` method, the `PlayerPrefs.SetFloat("mouseSenstivity", MouseSenstivitySlider.value);` statement is used to store the DPI value. When a script needs to use the DPI data, the `mouseSenstivity = PlayerPrefs.GetFloat("mouseSenstivity", 400f);` statement is used to change the mouse smoothness size.
+         - **4. Difficulties:** For example, when the `Hard` button is pressed, the `DifficultiesCtrlHard()` method is called. In the `DifficultiesCtrlHard()` method, the `PlayerPrefs.SetString("Difficulties", "Hard");` statement is used to store the difficulties setting. When a script needs to use the difficulties, it is used as described in section 2.6.2.
+       - **2. The settings can be opened in the Menu or in the game. When opened in the game, the game will be paused.**
+         -  When the `Setting (PauseMenu)` is opened in the game, the following command is executed to pause the game: `Time.timeScale = 0f;` When returning to the game, the `Time.timeScale = 1f;` command is executed to restore the normal game speed.
+     - **10. Items Fall**
+       - **1. When some enemies die, they will drop some items:**
+         - When an enemy dies, the `Instantiate(DropModel[dropIndex], GunDropPosition);` command is used at the set `GunDropPosition` to instantiate a weapon item, thereby implementing weapon drop.
+       - **2. Random Drop:**
+         - The `int dropIndex = Random.Range(0, DropModel.Length);` command can randomly select a gun model from `DropModel`, implementing random drop.
+       - **3. Can Collect Items:**
+         - The item has a `Collider` component. When the player collides with this Collider, the `ID` of this weapon will be passed into the `weapon inventory`, and this gun will be added to the `weapon inventory list`, implementing the collect function.
+       - **4. Have a Backpack to Check What Items Have Been Collected:**
+         - In some Battles, holding down the “Tab” key will display the `backpack UI`, and the game will run in slow motion. All collected items can be seen here.
+     - **11. Different Weapons**
+       - **There are four weapons for changing in the game: M4A1, AK47, Sniper, Pistol**
+       - **1.Different weapons have different kinds of bullets**
+         - M4A1 is a fully automatic firearm, the bullet uses a large bullet with a firing speed of 100 and a range of 300, and the damage range is between 20~35.
+         - AK47 is a fully automatic firearm, the bullet uses a large bullet with a firing speed of 100 and a range of 300, and the damage range is between 25~35.
+         - Sniper is a semi-automatic firearm, the bullet uses a large bullet with a firing speed of 500 and a range of 800, and the damage range is between 120~80.
+         - Pistol is a semi-automatic firearm, the bullet uses a small bullet with a firing speed of 100 and a range of 300, and the damage range is between 11~15.
+       - **2. Each weapon can zoom in and zoom out**
+         - When using firearms, holding down the right key will use the `animator.SetBool("Aim", isAiming);` command to play the zoom in animation in the animation state machine, call the `AimIn()` method, use the `mainCamera.fieldOfView = Mathf.SmoothDamp(30, 60, ref currentVelocity, 1f);` command to enlarge the field of view, implementing the zoom in function; when the left key is released, the animation state machine will play the zoom out animation, call the `AimOut()` method, use the `mainCamera.fieldOfView = Mathf.SmoothDamp(60, 30, ref currentVelocity, 1f);` command to restore the normal field of view size.
+       - **3. Weapon Switching**
+         - In some scenes, you can open the backpack by holding down the “TAB” key. You can then switch weapons by clicking on the weapon you want to switch to with the mouse, or by using the mouse scroll wheel . This allows for quick and efficient weapon changes during gameplay.
+     - **12. Battle Mode**
+       - 1. When players first enter the game, they can only start from `Battle 1`. After completing `Battle 1`, they can play `Battle 2`. This continues until `Battle 5`. For example, in `Battle 2`, when the `Successful UI` is displayed at the end of each level, the `if (PlayerPrefs.GetInt("Battle") <= 2)` `PlayerPrefs.SetInt("Battle", 2);` statement is executed to implement this feature.
+       - 2. The scenes and enemies in the five Battles will have obvious changes. The specific differences are detailed in sections 2.8.1 and 2.8.2 above. At the same time, the current Battle will be displayed in the upper right corner of the player’s interface.
+     - **13. Sound Effects**
+       - The game includes sound effects such as the player’s running sound, gun firing sound, explosion sound, etc., to enhance the player’s gaming experience.
+     - **14. Medical Kit**
+       - In `Battle 1` and `Battle 2`, when enemies are killed and randomly drop items, there is a chance to drop a `Medical Kit`. Players can pick it up to recover health.
 
 ## ADDITIONAL PART
 
