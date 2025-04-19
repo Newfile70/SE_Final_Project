@@ -154,18 +154,18 @@ This future plan aims to expand the game's features and provide a more engaging 
 ## ADDITIONAL PART
 
 ### DOME
-Short demo: https://youtu.be/Q-jC71MjLw0
-Complete demo: https://youtu.be/gDgfImw4XVs
+-  Short demo: https://youtu.be/Q-jC71MjLw0
+-  Complete demo: https://youtu.be/gDgfImw4XVs
 
 ### ENVIRONMENTS OF THE SOFTWARE DEVELOPMENT AND RUNNING
 - Programming Language
-   C#
+   -  C#
 - Development Environment
-   Windows 11 64-bit, Unity 2020.3.18f1c1
+   -  Windows 11 64-bit, Unity 2020.3.18f1c1
 - Minimum Computer Configurations
-   CPU: i5-6500
-   GPU: Nvidia GTX 1050
-   Memory: 4G
-   Display resolution: 1080p
+   -  CPU: i5-6500
+   -  GPU: Nvidia GTX 1050
+   -  Memory: 4G
+   -  Display resolution: 1080p
 
 ### Declaration (Any open sources, packages which are not developed by you (yourgroup) should be declared clearly)
