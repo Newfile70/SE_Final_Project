@@ -115,6 +115,40 @@ health.
     - "Walk Slower" When the script detects that the player is holding down the "CTRL" key, *crouchSpeed* is assigned to speed, thereby implementing "walk slower". At the same time, the *.Pause()* method is used to pause the walking or running sound effect, implementing "silent walk".
   - **5. HP Bar**
     - When the player takes damage from an enemy, the Health value decreases. In the script, the *.value* method is used to assign the Health value to the HP bar. If *playerHealthUIBar.value* <= 0 , the player will die.
+ #### 2. Game Loop (Win and Defeat):
+   - In the game, if the player dies, or the vehicle the player is riding in is destroyed, or if the task is not completed within the specified time, the game will be defeated and the *Fail UI* will be displayed. If the player completes the specified task within the specified time without dying, the game will be won and the *Successful UI* will be displayed. If the *Fail UI* is displayed, the player must restart the current scene (Game must be a cycle).
+ #### 3. Menu:
+   - The main interface has three options: *Battle* (start button), *Setting* (option button), *Exit* (exit button). These buttons are button components in the UI type. When *Battle* is pressed, the *battleMode UI* will be displayed. When *Setting* is pressed, the *setting UI* will be displayed. When *Exit* is pressed, the *Application.Quit()* command will be executed to exit the game.
+ #### 4. Enemy:
+  - **1. There are six different enemies in the game:** Soldier with M4A1 (A), Soldier with AK47 (B), Armed Helicopter (C), Hummer (D), Paladin (E), Mutant (F)
+    - A attacks by firing bullets with the M4A1 rifle.
+    - B attacks by firing bullets with the AK47 rifle.
+    - C attacks by launching missiles.
+    - D attacks by firing bullets with a vehicle-mounted machine gun.
+    - E attacks by slashing with a sword.
+    - F attacks by performing a jump attack to create a fiery fissure.
+  - **2. Each enemy has its own health bar and different health values**
+    - A has a health of 100
+    - B has a health of 100
+    - C has a health of 700
+    - D has a health of 3600
+    - E has a health of 600
+    - F has a health of 700.
+  - **3. Enemy's health bar**
+    - The enemy's health bar is placed above the enemy, and its remaining health is displayed on the health bar. Also, if the enemy is attacked by the player, the damage caused by the player will be displayed above the health bar.
+  - **4. The enemy to disappear**
+    - The *.value* method is used in the script to call the value of the health bar. If <= 0 , it signifies that the enemy is dead. The enemy's death animation will be played, and the *Destroy()* method will be called to make the enemy disappear after a certain period of time (A for 30 seconds, B for 5 or 30 seconds, C for 50 seconds, D for 20 seconds, E, F for 5 seconds).
+  - **5.Timer**
+    - There is a countdown (timer) at the top of the game interface. This countdown limits the time for the player to complete the task. If the player does not complete the specified task within this specified time, the game will fail and end. The countdown is controlled in the script using *leftTime - = Time.deltaTime*.
+  - **6. Different Difficulties**
+    - **1. Different difficulties (easy, normal, hard)**
+      - The game's difficulty can be set in the *Setting UI* interface, which can be easy, normal, or hard.
+    - **2. Each difficulties have obvious differences**
+      - In the game, in scenes with an instantiation method to generate enemies (except *Battle 4*), the difficulty setting will change the number and speed of enemies generated and the damage value of enemy attacks. In scenes with fixed enemies, the difficulty setting will change the damage value of enemy attacks. The implementation method in the script is roughly as follows: After the player clicks the *Hard* Button (taking easy as an example), the following method is used to set variables related to difficulty:<br>
+      if (PlayerPrefs.GetString("Difficulties") == "Easy") {<br>
+        MAX_Damage = MAX_Damage * 0.7f;<br>
+        MIN_Damage = MIN_Damage * 0.7f;<br>
+      }<br>
 
 ## ADDITIONAL PART
 
