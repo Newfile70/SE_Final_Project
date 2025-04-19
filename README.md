@@ -102,11 +102,25 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
 
 This future plan aims to expand the game's features and provide a more engaging and competitive experience for players. By integrating online battle functionality and other enhancements, we strive to create a dynamic and enjoyable gaming environment.
 
+### Technical Implementation Principle
+ #### 1. Main Character:
+  - **1. Movement**
+   - The Player (*gameObject*) is equipped with a *CharacterController* component. The *.Move()* method is used in the script to enable Player movement.
+  - **2. Shooting**
+   - A bullet firing point is set on the gun model. The *RaycastHit ray* detection method is used to shoot a ray from the bullet firing point. If the ray hits an enemy (tagged as 'enemy'), a bullet prefab is instantiated at the bullet firing point and a forward force is applied to the bullet prefab, launching the bullet. If the collider on the bullet contacts the collider on the enemy, it signifies that the bullet has hit the enemy, and the enemy will lose health. Each time a bullet is fired, the remaining bullet count decreases, and the *.text* method is used to assign the bullet count to the bullet count UI, which is displayed on the player's interface.
+  - **3. Close Attack**
+   - When the player uses a handgun and presses "E", they can use a dagger for close combat. In the script, if "E" is detected as being pressed, the *.SetTrigger()* method is used to call the close combat animation in the animation state machine. At the same time, the collider switch is set in the close combat animation. If the collider contacts the enemy's collider (tagged as 'enemy'), it signifies that the dagger has hit the enemy, and the enemy will lose
+health.
+  - **4. Silent Walk**
+  - "Walk Slower" When the script detects that the player is holding down the "CTRL" key, *crouchSpeed* is assigned to speed, thereby implementing "walk slower". At the same time, the *.Pause()* method is used to pause the walking or running sound effect, implementing "silent walk".
+  - **5. HP Bar**
+   - When the player takes damage from an enemy, the Health value decreases. In the script, the *.value* method is used to assign the Health value to the HP bar. If *playerHealthUIBar.value* <= 0 , the player will die.
+
 ## ADDITIONAL PART
 
 ### DOME
 -  Short demo: https://youtu.be/Q-jC71MjLw0
--  Complete demo: https://youtu.be/gDgfImw4XVs
+-  Demonstration of the whole process: https://youtu.be/gDgfImw4XVs
 
 ### ENVIRONMENTS OF THE SOFTWARE DEVELOPMENT AND RUNNING
 - Programming Language
