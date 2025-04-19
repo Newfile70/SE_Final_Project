@@ -121,7 +121,7 @@ This future plan aims to expand the game's features and provide a more engaging 
   - **4. Silent Walk**
     - "Walk Slower" When the script detects that the player is holding down the "CTRL" key, `crouchSpeed` is assigned to speed, thereby implementing "walk slower". At the same time, the `.Pause()` method is used to pause the walking or running sound effect, implementing "silent walk".
   - **5. HP Bar**
-    - When the player takes damage from an enemy, the Health value decreases. In the script, the `.value` method is used to assign the Health value to the HP bar. If `playerHealthUIBar.value <= 0`, the player will die.
+    - When the player takes damage from an enemy, the Health value decreases. In the script, the `.value` method is used to assign the Health value to the HP bar. If `playerHealthUIBar.value` <= 0, the player will die.
  #### 2. Game Loop (Win and Defeat):
    - In the game, if the player dies, or the vehicle the player is riding in is destroyed, or if the task is not completed within the specified time, the game will be defeated and the *Fail UI* will be displayed. If the player completes the specified task within the specified time without dying, the game will be won and the `Successful UI` will be displayed. If the *Fail UI* is displayed, the player must restart the current scene (Game must be a cycle).
  #### 3. Menu:
