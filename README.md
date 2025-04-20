@@ -74,7 +74,7 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
   - role: project manager, software designer and software maintainer
   - responsibility: mainly determine the type of software and corresponding functions, write the source code for each of the function to make sure the software can work well and add relevant functions to the software to maintain its normal operation   
   - portion:
-    - complete the some source code
+    - complete the scenes scripts source code and scenes model construction
     - complete some parts in the readme file
     - design the main structure of our software
     - do the testing for our software
@@ -83,7 +83,7 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
   - role: project manager, software designer and software analyst
   - responsibility: mainly determine the type of software and corresponding functions, write the source code for each of the function to make sure the software can work well.
   - portion:
-    - complete the remaining source code
+    - complete the main character movement and gun use scripts source code
     - do the testing for our software
     - design the main structure of our software
     - analyst the whole software 
@@ -92,10 +92,11 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
   - role: project manager, software tester and software analyst
   - responsibility: mainly determine the type of software and corresponding functions, test whether each of the function can work in diffierent cases then write a document to summary our software and analyze the rationality and consistency of the use of relevant functions  . 
   - portion:
-    -  do the testing for our software
-    -  design the main structure of our software
-    -  analyst the whole software with each of the function
-    -  complete remaining parts in the readme file
+    - complete the remaining source code
+    - do the testing for our software
+    - design the main structure of our software
+    - analyst the whole software with each of the function
+    - complete remaining parts in the readme file
 
 #### FUTURE PLAN
 
@@ -172,7 +173,7 @@ This future plan aims to expand the game's features and provide a more engaging 
       - Battle 3 has enemy E
       - Battle 4 has enemy F
       - Battle 5 has enemies B and D.
-#### 9. Settings:**
+#### 9. Settings:
   - **1. There are four options in the settings:**
     - **1. Volume:** A slider is used to adjust the volume. Each time the slider is moved, the `AudioCtrl()` method is called. In the `AudioCtrl()` method, the `PlayerPrefs.SetFloat("AudioValue", AudioSlider.value);` statement is used to store the volume value. When an `AudioSource` needs to use the volume data, the `audioSource.volume = PlayerPrefs.GetFloat("AudioValue", 60f) / 60 * defaultVolume;` statement is used to change the volume of the `gameObject`.
     - **2. Brightness:** A slider is used to adjust the brightness. Each time the slider is moved, the `LightCtrl()` method is called. In the `LightCtrl()` method, the `PlayerPrefs.SetFloat("LightValue", LightSlider.value);` statement is used to store the brightness value. When a Light component needs to use the brightness data, the `lightVal.intensity = PlayerPrefs.GetFloat("LightValue", 60f) / 60 * defaultBrightness;` statement is used to change the brightness of the `Directional Light` or other Lights.
