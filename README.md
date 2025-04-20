@@ -28,12 +28,10 @@
 
 - We don't have too many regulations on the software, except for some fixed requirements, we decide the development strategy based on the current development process. Therefore, the agile process is a better choice for us.
 
-#### POSSIBLE USAGE
-
-Identify users
-Hardcore single-player players: pursue high-difficulty level challenges and immersive story experience
-Casual players: adapt to different skill levels through difficulty adjustment system (easy/medium/hard)
-Potential cooperative mode players: reserve design interface for future multiplayer online functions
+#### POSSIBLE USAGE(Identify users)
+- Hardcore single-player players: pursue high-difficulty level challenges and immersive story experience
+- Casual players: adapt to different skill levels through difficulty adjustment system (easy/medium/hard)
+- Potential cooperative mode players: reserve design interface for future multiplayer online functions
 
 ### SOFTWARE DEVELOPMENT PLAN
  #### Development Process
@@ -88,7 +86,7 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
     - design the main structure of our software
     - analyst the whole software 
     - improve the function of the software
-- HUANG BAOYI (P2320324):
+- Baoyi (P2320324):
   - role: project manager, software tester and software analyst
   - responsibility: mainly determine the type of software and corresponding functions, test whether each of the function can work in diffierent cases then write a document to summary our software and analyze the rationality and consistency of the use of relevant functions  . 
   - portion:
