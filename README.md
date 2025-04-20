@@ -96,8 +96,23 @@ Physical environment: Brightness slider (LightSlider.value) adapts to different 
     - analyst the whole software with each of the function
     - complete remaining parts in the readme file
 
-#### FUTURE PLAN
+#### Current Status
+- **Core Features** 
+  - Main Character System : Movement, shooting, melee attacks, stealth (slow walk), and HP bar display.  
+  - Game Loop : Win/loss conditions with UI prompts and scene restart functionality.  
+  - Enemy System : 6 enemy types with unique behaviors and attack patterns, featuring health bars and damage display.  
+  - Timer System : Time limits enforced for each battle.  
+  - Scene Design : 5 distinct scenes, each with unique enemies and mission objectives.  
+- **Advanced Features**   
+  - Settings Menu : Adjustable volume, brightness, mouse DPI, and difficulty levels. Settings saved via `PlayerPrefs`.  
+  - Item Drops : Enemies randomly drop weapons or medkits. Backpack system allows item inspection.  
+  - Weapon System : 4 weapon types (e.g., M4A1, AK47) with aiming zoom and switching mechanics.  
+- **Additional Features**    
+  - Battle Mode Progression : Players unlock battles sequentially.  
+  - Sound Effects : Immersive audio (gunfire, explosions, etc.).  
+  - Medkits : Random drops in the first two battles to restore health.  
 
+#### FUTURE PLAN
 - **Integration with Other Tools**: Our game will integrate with other gaming platforms and tools, such as leaderboards, player statistics tracking, and social media sharing. These integrations aim to enhance player engagement and connectivity.
 - **Online Battle Functionality**:
   - **Real-Time Multiplayer Battles**: Implement real-time multiplayer battles where players can compete against each other in various game modes.
