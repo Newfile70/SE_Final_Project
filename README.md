@@ -153,7 +153,7 @@ This future plan aims to expand the game's features and provide a more engaging 
     - **2. Each difficulties have obvious differences**
       - In the game, in scenes with an instantiation method to generate enemies (except `Battle 4`), the difficulty setting will change the number and speed of enemies generated and the damage value of enemy attacks. In scenes with fixed enemies, the difficulty setting will change the damage value of enemy attacks. The implementation method in the script is roughly as follows: After the player clicks the `Hard` Button (taking easy as an example), the following method is used to set variables related to difficulty:<br>
       &nbsp;&nbsp;&nbsp;&nbsp;`if (PlayerPrefs.GetString("Difficulties") == "Easy") {`<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MAX_Damage = MAX_Damage *_ 0.7f;`<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MAX_Damage = MAX_Damage * 0.7f;`<br>
       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`MIN_Damage = MIN_Damage * 0.7f;`<br>
       &nbsp;&nbsp;&nbsp;&nbsp;`}`<br>
    - **7. Programming:**
