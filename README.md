@@ -5,7 +5,7 @@
 ### GRAPHIC ABSTRACTION
 
 ### Introduction
-- This is a first-person 3D FPS shooting game which is built by Unity 3D with C# as the programming language. In this game, players will assume the role of a special forces soldier, traversing between modern and ancient times, reality and science fiction, to achieve victory in five battles.
+- This is a first-person 3D FPS shooting game called shadowstrike which is built by Unity 3D with C# as the programming language. In this game, players will assume the role of a special forces soldier, traversing between modern and ancient times, reality and science fiction, to achieve victory in five battles.
   - **Battles 1:** Players will board a helicopter (with a hardness of 20,000) to launch an attack on a town occupied by terrorists. Victory can be achieved by eliminating all enemies encountered on the road and within the town. The game will end in failure if the helicopter is destroyed, the player (with a health of 100) is killed by the enemy, or if all enemies are not eliminated within 15 minutes. 
   - **Battles 2:** The player, alone, must reach a gas station surrounded by enemies and defuse the bomb planted by the enemies inside the gas station to win. The game will end in failure if the player (with a health of 100) is killed by the enemy or if the bomb explodes after the countdown ends (100 seconds). 
   - **Battles 3:** The player will travel to a medieval arena, armed only with a handgun without bullets, to engage in close combat with Paladins. Victory can be achieved by eliminating a certain number of Paladins. The game will end in failure if the player (with a health of 100) is killed by the Paladin or if the countdown ends (200 seconds). 
