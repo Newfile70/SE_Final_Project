@@ -1,7 +1,7 @@
 # SE_Final_Project
 
 ## ESSENTIAL PART
-
+![image](https://github.com/Newfile70/SE_Final_Project/blob/main/Graphical%20Abstract.jpg)
 ### GRAPHIC ABSTRACTION
 
 ### Introduction
