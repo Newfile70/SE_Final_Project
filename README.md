@@ -1,8 +1,8 @@
 # SE_Final_Project
 
 ## ESSENTIAL PART
-![image](https://github.com/Newfile70/SE_Final_Project/blob/main/Graphical%20Abstract.jpg)
 ### GRAPHIC ABSTRACTION
+![image](https://github.com/Newfile70/SE_Final_Project/blob/main/Graphical%20Abstract.jpg)
 
 ### Introduction
 - This is a first-person 3D FPS shooting game called shadowstrike which is built by Unity 3D with C# as the programming language. In this game, players will assume the role of a special forces soldier, traversing between modern and ancient times, reality and science fiction, to achieve victory in five battles.
